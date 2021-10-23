@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2021-09-30T20:45:03Z</date>
+    <groups>
+        <group>
+            <name>My group/sub group</name>
+        </group>                
+    </groups>
+    <templates>
+        <template>
+            <template>Template - MCM Generators</template>
+            <name>Template - MCM Generators</name>
+            <groups>
+                <group>
+                    <name>My group/sub group</name>
+                </group>        
+            </groups>
+            <applications>
+                <application>
+                    <name>MCM</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Gen Available Status</name>
+                    <type>TRAP</type>
+                    <key>mcm.gen.available.state.2700</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>MCM</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Utility L1 Current</name>
+                    <type>TRAP</type>
+                    <key>mcm.l1.current.2126</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>A</units>
+                    <applications>
+                        <application>
+                            <name>MCM</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Utility L1 KW</name>
+                    <type>TRAP</type>
+                    <key>mcm.l1.kw.2130</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>KW</units>
+                    <applications>
+                        <application>
+                            <name>MCM</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Utility L1 L2 Voltage</name>
+                    <type>TRAP</type>
+                    <key>mcm.l1l2.voltage.2122</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>V</units>
+                    <applications>
+                        <application>
+                            <name>MCM</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Utility L1 Voltage</name>
+                    <type>TRAP</type>
+                    <key>mcm.l1voltage.2118</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>V</units>
+                    <applications>
+                        <application>
+                            <name>MCM</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Utility L2 Current</name>
+                    <type>TRAP</type>
+                    <key>mcm.l2.current.2127</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>A</units>
+                    <applications>
+                        <application>
+                            <name>MCM</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Utility L2 KW</name>
+                    <type>TRAP</type>
+                    <key>mcm.l2.kw.2131</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>KW</units>
+                    <applications>
+                        <application>
+                            <name>MCM</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Utility L2 L3 Voltage</name>
+                    <type>TRAP</type>
+                    <key>mcm.l2l3.voltage.2123</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>V</units>
+                    <applications>
+                        <application>
+                            <name>MCM</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Utility L2 Voltage</name>
+                    <type>TRAP</type>
+                    <key>mcm.l2voltage.2119</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>V</units>
+                    <applications>
+                        <application>
+                            <name>MCM</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Utility L3 Current</name>
+                    <type>TRAP</type>
+                    <key>mcm.l3.current.2128</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>A</units>
+                    <applications>
+                        <application>
+                            <name>MCM</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Utility L3 KW</name>
+                    <type>TRAP</type>
+                    <key>mcm.l3.kw.2132</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>KW</units>
+                    <applications>
+                        <application>
+                            <name>MCM</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Utility L3 L1 Voltage</name>
+                    <type>TRAP</type>
+                    <key>mcm.l3l1.voltage.2124</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>V</units>
+                    <applications>
+                        <application>
+                            <name>MCM</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Utility L3 Voltage</name>
+                    <type>TRAP</type>
+                    <key>mcm.l3voltage.2120</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>V</units>
+                    <applications>
+                        <application>
+                            <name>MCM</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Utility Average Voltage</name>
+                    <type>TRAP</type>
+                    <key>mcm.ln.average.2121</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>V</units>
+                    <applications>
+                        <application>
+                            <name>MCM</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Utility Status</name>
+                    <type>TRAP</type>
+                    <key>mcm.status.2117</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>MCM</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Utility Total KW</name>
+                    <type>TRAP</type>
+                    <key>mcm.total.kw.2133</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>KW</units>
+                    <applications>
+                        <application>
+                            <name>MCM</name>
+                        </application>
+                    </applications>
+                </item>
+            </items>
+        </template>
+    </templates>
+</zabbix_export>

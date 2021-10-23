@@ -1,0 +1,49 @@
+{
+	"boards": [		
+		{
+			"id": "board-id",
+			"name": "name-board",
+			"ip": "address ip of board",
+			"portBoard": "port of board",
+			"portZabbix": "port of zabbix",
+			"ipZabbixServer":"address for zabbix server",
+			"generators": [
+				{
+					"id": "id generator",
+					"name": "name of generator",
+					"nameHost": "name of your generator save in Zabbix host"
+				},
+				{
+					"id": "id generator",
+					"name": "name of generator",
+					"nameHost": "name of your generator save in Zabbix host"
+				},
+				{
+					"id": "id generator",
+					"name": "name of generator",
+					"nameHost": "name of your generator save in Zabbix host"
+				}
+			]
+		}				
+	],
+	"itensGenerator": [
+		{
+			"id": "id of item",
+			"key": "key saved in zabbix template"
+		},
+		{
+			"id": "11",
+			"key": "gen.operation.state.0011"
+		}		
+	],
+	"itensBoards": [
+		{
+			"id": "id of item",
+			"key": "key saved in zabbix template"
+		},
+		{
+			"id": "2117",
+			"key": "mcm.status.2117"
+		}	
+	]
+}

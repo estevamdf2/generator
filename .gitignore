@@ -1,0 +1,13 @@
+/target
+*~
+.classpath
+.project
+.settings
+.DS_Store
+*.iml
+/bin
+configuracao/config-*.json
+configuracao/config.json
+src/test/resources/download/
+*.jar
+*.log

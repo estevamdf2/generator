@@ -1,0 +1,154 @@
+{
+	"boards": [		
+		{
+			"id": "5",
+			"name": "Gerador MCM Devel",
+			"ip": "x.x.x.x",
+			"portBoard": "502",
+			"portZabbix": "10051",
+			"ipZabbixServer":"x.x.x.x",
+			"generators": [
+				{
+					"id": "1",
+					"name": "generator 1",
+					"nameHost": "Generator 1 Devel"
+				},
+				{
+					"id": "2",
+					"name": "generator 2",
+					"nameHost": "Generator 2 Devel"
+				},
+				{
+					"id": "3",
+					"name": "generator 3",
+					"nameHost": "Generator 3 Devel"
+				}
+			]
+		}				
+	],
+	"itensGenerator": [
+		{
+			"id": "10",
+			"key": "gen.switch.position.0010"
+		},
+		{
+			"id": "11",
+			"key": "gen.operation.state.0011"
+		},
+		{
+			"id": "12",
+			"key": "gen.fault.code.0012"
+		}, 
+		{
+			"id": "18",
+			"key": "gen.output.voltage.0018"
+		},
+		{
+			"id": "19",
+			"key": "gen.output.voltageb.0019"
+		},
+		{
+			"id": "20",
+			"key": "gen.output.voltagec.0020"
+		},
+		{
+			"id": "26",
+			"key": "gen.output.current.0026"
+		},
+		{
+			"id": "27",
+			"key": "gen.output.currentb.0027"
+		},
+		{
+			"id": "28",
+			"key": "gen.output.currentc.0028"
+		},
+		{
+			"id": "61",
+			"key": "gen.battery.voltage.0061"
+		},
+		{
+			"id": "62",
+			"key": "gen.engine.pressure.0062"
+		},
+		{
+			"id": "64",
+			"key": "gen.engine.temperature.0064"
+		},
+		{
+			"id": "67",
+			"key": "gen.fuel.rate.0067"
+		},
+		{
+			"id": "68",
+			"key": "gen.engine.rpm.0068"
+		}
+	],
+	"itensBoards": [
+		{
+			"id": "2133",
+			"key": "mcm.total.kw.2133"
+		},
+		{
+			"id": "2117",
+			"key": "mcm.status.2117"
+		},
+		{
+			"id": "2121",
+			"key": "mcm.ln.average.2121"
+		},
+		{
+			"id": "2120",
+			"key": "mcm.l3voltage.2120"
+		},
+		{
+			"id": "2124",
+			"key": "mcm.l3l1.voltage.2124"
+		},
+		{
+			"id": "2132",
+			"key": "mcm.l3.kw.2132"
+		},
+		{
+			"id": "2128",
+			"key": "mcm.l3.current.2128"
+		},
+		{
+			"id": "2119",
+			"key": "mcm.l2voltage.2119"
+		},
+		{
+			"id": "2123",
+			"key": "mcm.l2l3.voltage.2123"
+		},
+		{
+			"id": "2131",
+			"key": "mcm.l2.kw.2131"
+		},
+		{
+			"id": "2127",
+			"key": "mcm.l2.current.2127"
+		},
+		{
+			"id": "2118",
+			"key": "mcm.l1voltage.2118"
+		},
+		{
+			"id": "2122",
+			"key": "mcm.l1l2.voltage.2122"
+		},
+		{
+			"id": "2130",
+			"key": "mcm.l1.kw.2130"
+		},
+		{
+			"id": "2126",
+			"key": "mcm.l1.current.2126"
+		},
+		{
+			"id": "2700",
+			"key": "mcm.gen.available.state.2700"
+		}
+
+	]
+}

@@ -1,0 +1,139 @@
+= Generator
+:toc:
+:toc-title: Summary
+:toclevels: 4
+:hide-uri-scheme:
+
+> _Java application that realize read using modBus of boards MCM and generators bound at this board.
+After its using Zabbix Sender library for sent data of Zabbix Server.
+Board model MCM3200 and Generator model C500D6_
+
+== Tecnologies
+
+* Java: JDK 8
+* Modbus4J
+* Zabbix Sender
+* Apache Maven
+* Zabbix Server - versão 5.0.4
+* Client modbus driver link:https://www.modbusdriver.com/modpoll.html[modpool]
+
+== Zabbix Templates
+
+Were created Zabbix Templates for realize the collect of data.
+All registered itens were in templates they were obtain in manual of board.
+link:docs/modbus2300.pdf[MCM 3320]
+
+Manual of generator link:docs/C500D6_PT_REV01.pdf[Generator C500D6]
+
+=== Template MCM Generators
+
+Itens that realize read obtain of board model **MCM 3320** bound at generators.
+
+link:docs/zabbix/zbx_export_templates_mcm.xml[Template MCM Generators]
+
+=== Template Geradores
+
+Itens that realize read obtain of generators bound at board model **MCM 3320**.
+
+link:docs/zabbix/zbx_export_templates_generators.xml[Template Generators]
+
+== Setup
+
+This project needs information of configuration for be run. In this file be information as:
+
+* Zabbix Server address
+* Port of Zabbix
+* Itens of generator
+* Itens of board MCM
+* etc
+
+=== Configuration file
+
+Sample of configuration file as be used.
+
+[source,json]
+include::setup/config-dist.json[]
+
+
+**Important !!!**
+
+The itens of generators and boards must be updated follow changes realized in Zabbix templates created for Zabbix.
+
+- link:docs/zabbix/zbx_export_templates_generators.xml[Template - MCM Generators]
+- link:docs/zabbix/zbx_export_templates_mcm.xml[Template - Generators]
+
+=== Environment variable
+
+You need create this environment variable `GENERATOR_ENVIRONMENT`. If you not create the configuration file load will be **config-devel.json** 
+
+Values for environment:
+
+- `development`: Load configurations for development environment;
+- `production`: Load configurations for production environment.
+
+== Apache Maven
+
+The application used `Apache Maven` for build the executable of project `.jar`
+
+=== Packaging of application
+
+To build the executable of application run the command
+
+```shell
+mvn package
+```
+
+At the final of execution. You will be output similar that below:
+
+```sh
+[INFO] Scanning for projects...
+[WARNING]
+[WARNING] Some problems were encountered while building the effective model for br.com.myCompany:generator:jar:${PROJECT_VERSION-SNAPSHOT}
+[WARNING] "version" contains an expression but should be a constant. @ line 5, column 11
+[WARNING]
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING]
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING]
+[INFO]
+[INFO] --------------------< br.com.myCompany:generator >--------------------
+[INFO] Building generator ${PROJECT_VERSION-SNAPSHOT}
+[INFO] --------------------------------[ jar ]---------------------------------
+...
+...
+[INFO] ch/qos/ already added, skipping
+[INFO] ch/qos/logback/ already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/ch.qos.logback/ already added, skipping
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.891 s
+[INFO] Finished at: 2021-10-05T16:51:22-03:00
+[INFO] ------------------------------------------------------------------------
+```
+
+Will be create one directory called `target` and here will be available the executable of project. The file will be used is *generator-null-jar-with-dependencies.jar*
+
+You maybe rename the file for exemple `generator.jar` for more easy to run application.
+
+== Run application
+
+After created the executable. Run this command
+
+```shell
+java -jar generator.jar
+```
+
+You will see the logs of application show in your terminal.
+
+```shell
+ 2021-10-23 19:56:12 INFO  Configuration:62 - Configuration file loading with sucessfuly. Environment development
+2021-10-23 19:56:41 INFO  Main:57 - Send datas of itens boards Generator MCM Devel ip xx.xx.xx.xx
+ 2021-10-23 19:56:45 INFO  Main:62 - IP Board x.x.x.x item/key mcm.total.kw.2133 value 2
+ 2021-10-23 19:56:52 INFO  Main:68 - Value of item mcm.total.kw.2133 sent to Zabbix.
+ 2021-10-23 19:56:54 INFO  Main:62 - IP Board x.x.x.x item/key mcm.status.2117 value 221
+ 2021-10-23 19:56:56 INFO  Main:68 - Value of item mcm.status.2117 sent to Zabbix.
+ 2021-10-23 19:56:59 INFO  Main:62 - IP Board x.x.x.x item/key mcm.ln.average.2121 value 384
+ 2021-10-23 19:57:00 INFO  Main:68 - Value of item mcm.ln.average.2121 sent to Zabbix.
+```
